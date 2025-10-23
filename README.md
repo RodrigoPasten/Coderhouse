@@ -18,4 +18,3 @@ El simulador permite ingresar los datos de un postulante, responder algunas preg
 
 ---
 
-## ⚙️ Estructura del proyecto
