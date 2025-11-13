@@ -1,14 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Entregable</title>
-    <script src="app.js" defer></script>
+    <title>Legeria - Evaluación Psicológica</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <h1>Nombre Alumno</h1>
-    <h2>Rodrigo Pastén Cortés</h2>
-    <h3>Simulador de pruebas psicosensométricas</h3>
+    <div class="container">
+        <h1>Evaluación de Competencias Laborales</h1>
+
+        <div class="formulario-seccion">
+            <h2>Datos Personales</h2>
+            <form id="formularioEvaluacion">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" min="18" max="65" required>
+                </div>
+
+                <h2>Preguntas de Evaluación</h2>
+                <p class="instrucciones">Responde del 1 al 5, donde 1 es "Muy bajo" y 5 es "Muy alto"</p>
+
+                <div class="form-group">
+                    <label for="pregunta1">1. ¿Cómo calificarías tu capacidad de trabajo en equipo?</label>
+                    <select id="pregunta1" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="1">1 - Muy bajo</option>
+                        <option value="2">2 - Bajo</option>
+                        <option value="3">3 - Regular</option>
+                        <option value="4">4 - Bueno</option>
+                        <option value="5">5 - Muy bueno</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pregunta2">2. ¿Qué tan bien manejas situaciones de presión?</label>
+                    <select id="pregunta2" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="1">1 - Muy bajo</option>
+                        <option value="2">2 - Bajo</option>
+                        <option value="3">3 - Regular</option>
+                        <option value="4">4 - Bueno</option>
+                        <option value="5">5 - Muy bueno</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pregunta3">3. ¿Cómo evalúas tu nivel de responsabilidad?</label>
+                    <select id="pregunta3" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="1">1 - Muy bajo</option>
+                        <option value="2">2 - Bajo</option>
+                        <option value="3">3 - Regular</option>
+                        <option value="4">4 - Bueno</option>
+                        <option value="5">5 - Muy bueno</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Evaluación</button>
+            </form>
+        </div>
+
+        <div id="resultadoSeccion" class="resultado-seccion" style="display: none;">
+            <h2>Resultado de la Evaluación</h2>
+            <div id="resultadoContenido"></div>
+            <button id="btnNuevaEvaluacion" class="btn-nuevo">Nueva Evaluación</button>
+        </div>
+
+        <div class="historial-seccion">
+            <h2>Historial de Evaluaciones</h2>
+            <button id="btnLimpiarHistorial" class="btn-limpiar">Limpiar Historial</button>
+            <div id="historialContenido">
+                <p>No hay evaluaciones guardadas</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
